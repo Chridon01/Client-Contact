@@ -3,8 +3,7 @@
 $sname= "localhost";
 $unmae= "root";
 $password = "";
-
-$db_name = "login_db";
+$db_name = "bcity_db";
 
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 

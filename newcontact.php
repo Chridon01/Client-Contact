@@ -16,27 +16,27 @@
           <?php } ?>
 
           <label>Name</label>
-          <?php if (isset($_GET['cname'])) { ?>
+          <?php if (isset($_GET['contactName'])) { ?>
                <input type="text" 
-                      name="cname" 
+                      name="contactName" 
                       placeholder="Name"
-                      value="<?php echo $_GET['cname']; ?>"><br>
+                      value="<?php echo $_GET['contactName']; ?>"><br>
           <?php }else{ ?>
                <input type="text" 
-                      name="cname" 
+                      name="contactName" 
                       placeholder="Name"><br>
           <?php }?>
 
           <label>Surname</label>
-          <?php if (isset($_GET['csurname'])) { ?>
+          <?php if (isset($_GET['contactSurname'])) { ?>
                <input type="text" 
-                      name="csurname" 
+                      name="contactSurname" 
                       placeholder="Surname"
-                      value="<?php echo $_GET['csurname']; ?>"><br>
+                      value="<?php echo $_GET['contactSurname']; ?>"><br>
                       
           <?php }else{ ?>
                <input type="text" 
-                      name="csurname" 
+                      name="contactSurname" 
                       placeholder="Surname"><br>
 
                
@@ -44,15 +44,15 @@
           <?php }?>
           
           <label>Email Address</label>
-          <?php if (isset($_GET['cemail'])) { ?>
+          <?php if (isset($_GET['contactEmail'])) { ?>
                <input type="text" 
-                      name="cemail" 
+                      name="contactEmail" 
                       placeholder="Email Address"
-                      value="<?php echo $_GET['cemail']; ?>"><br>
+                      value="<?php echo $_GET['contactEmail']; ?>"><br>
                       
           <?php }else{ ?>
                <input type="text" 
-                      name="cemail" 
+                      name="contactEmail" 
                       placeholder="Email Address"><br>
 
                

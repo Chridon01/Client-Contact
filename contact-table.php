@@ -28,12 +28,12 @@ th, td {
 			<tr>
 				
 				<th>Surname</th>
-        <th>Name</th>
-        <th>Email Address</th>
+        		<th>Name</th>
+        		<th>Email Address</th>
 			</tr>
 			<?php
-			$conn= mysqli_connect("localhost","root","","login_db");
-			$sql5 = "SELECT * FROM contacts ORDER BY csurname ASC";
+			$conn= mysqli_connect("localhost","root","","bcity_db");
+			$sql5 = "SELECT * FROM contacts_tbl ORDER BY contactSurname ASC";
 			$result = mysqli_query($conn, $sql5);
 			
 			$row = mysqli_num_rows($result);
@@ -42,7 +42,7 @@ th, td {
 
 				while($row=$result-> fetch_assoc()){
 						
-					echo "<tr ><td>" . $row["csurname"]. "</td><td>". $row["cname"]."</td><td>".$row["cemail"]."</td></tr>";
+					echo "<tr ><td>" . $row["contactSurname"]. "</td><td>". $row["contactName"]."</td><td>".$row["contactEmail"]."</td></tr>";
 
 				}
 			}

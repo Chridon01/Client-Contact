@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start(); 
 include "db_conn.php";
 
@@ -24,7 +24,7 @@ if (isset($_POST['clientCode'])
 	
 	
 
-	    $sql = "SELECT * FROM users WHERE clientName='$clientName' ";
+	    $sql = "SELECT * FROM clients_tble WHERE clientName='$clientName' ";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
