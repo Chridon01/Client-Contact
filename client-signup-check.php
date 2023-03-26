@@ -24,14 +24,14 @@ if (isset($_POST['clientCode'])
 	
 	
 
-	    $sql = "SELECT * FROM clients_tble WHERE clientName='$clientName' ";
+	    $sql = "SELECT * FROM clients_tbl WHERE clientName='$clientName' ";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			header("Location: client-signup.php?error=The client is taken try another&$user_data");
 	        exit();
 		}else {
-           $sql2 = "INSERT INTO users(clientCode, clientName) VALUES('$clientCode', '$clientName')";
+           $sql2 = "INSERT INTO clients_tbl(clientCode, clientName) VALUES('$clientCode', '$clientName')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
            	 header("Location: client-signup.php?success=Client Added");
