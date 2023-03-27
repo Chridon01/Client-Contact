@@ -9,7 +9,7 @@ include "db_conn.php";
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
 table, th, td {
-  border: 1px solid black;
+  border: 2px solid black;
   border-collapse: collapse;
 }
 th, td {
@@ -47,8 +47,9 @@ th, td {
 				}
 			}
 			else {
-
+				
 				echo "No contacts(s) found ";
+				
 			}
 			$conn ->close();
 		
@@ -57,9 +58,9 @@ th, td {
 			
 		</table>
      	
-          <a href="client-signup.php" class="ca">Create new Client</a>
-		  <a href="newcontact.php" class="ca">Create new Contact</a>
-		  <a href="index.php" class="ca">View Client list</a>
+          <a href="client-signup.php" class="ca">Create new Client</a><br>
+		  <a href="newcontact.php" class="ca">Create new Contact</a><br>
+		  <a href="index.php" class="ca">View Clients </a>
      </form>
 </body>
 </html>

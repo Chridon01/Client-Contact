@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-include "db_conn.php";
+include "bcity_db.php";
 
 if (isset($_POST['clientCode']) 
  && isset($_POST['clientName'])) {
@@ -12,7 +12,7 @@ if (isset($_POST['clientCode'])
 	   return $data;
 	}
 
-	$clientCode = validate($_POST['clientCode']);
+	$clientCode = strtoupper($_POST['clientCode']);
 	$clientName = validate($_POST['clientName']);
 
 	
@@ -21,8 +21,6 @@ if (isset($_POST['clientCode'])
 	$user_data = 'clientName='. $clientName. '&clientCode='. $clientCode;
 
 
-	
-	
 
 	    $sql = "SELECT * FROM clients_tbl WHERE clientName='$clientName' ";
 		$result = mysqli_query($conn, $sql);
@@ -48,3 +46,4 @@ else{
 	header("Location: client-signup-check.php");
 	exit();
 }
+?>

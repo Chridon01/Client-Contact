@@ -13,7 +13,7 @@ table, th, td {
   border-collapse: collapse;
 }
 th, td {
-  padding: 10px;
+  padding: 6px;
 }
 
 
@@ -24,42 +24,41 @@ th, td {
      <form action="client-table.php" method="post">
      	<h2>Client Table</h2>
 		
-		 <a href="client-signup.php" class="ca">Create new Client</a>
-     	<table>
-			<tr>
+		 
+     		<table >
+				<tr>
 				<th>Client Code</th>
-			
 				<th>Client Name</th>
-				
-			</tr>
-			<?php
-			$conn= mysqli_connect("localhost","root","","bcity_db");
-			$sql5 = "SELECT * FROM clients_tbl ORDER BY clientName ASC";
-			$result = mysqli_query($conn, $sql5);
+				</tr>
+				<?php
+				$conn= mysqli_connect("localhost","root","","bcity_db");
+				$sql5 = "SELECT * FROM clients_tbl ORDER BY clientName ASC";
+				$result = mysqli_query($conn, $sql5);
 			
-			$row = mysqli_num_rows($result);
+				$row = mysqli_num_rows($result);
 		
-			if ($result ->num_rows > 0 ){
+				if ($result ->num_rows > 0 ){
 
 				while($row=$result-> fetch_assoc()){
 						
 					echo "<tr ><td>" . $row["clientCode"],$row["clientID"]. "</td><td>". $row["clientName"]."</td></tr>";
 
 				}
-			}
-			else {
+				}
+				else {
 
 				echo "No client(s) found ";
-			}
-			$conn ->close();
+				}
+				$conn ->close();
 		
 		?>
 			
 		</table>
-     	
-          
-		  <a href="newcontact.php" class="ca">Create new Contact</a>
-		  <a href="contact-table.php" class="ca">View contact list</a>
+
+     	<a href="client-signup.php" class="ca">Create new Client</a>
+		  	<a href="newcontact.php" class="ca">Create new Contact</a>
+		  	<a href="contact-table.php" class="ca">View contacts</a>
+			
      </form>
 </body>
 </html>

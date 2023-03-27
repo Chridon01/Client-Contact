@@ -3,23 +3,25 @@ session_start();
 include "db_conn.php";
 
 if (isset($_POST['contactName']) 
- && isset($_POST['contactSurname'])&& isset($_POST['contactEmail'])) {
+ && isset($_POST['contactSurname'])&& isset($_POST['contactEmail']))
+ {
 
-	function validate($data){
+		function validate($data)
+		{
        $data = trim($data);
 	   $data = stripslashes($data);
 	   $data = htmlspecialchars($data);
 	   return $data;
-	}
+		}
 
-	$contactName = validate($_POST['contactName']);
-	$contactSurname = validate($_POST['contactSurname']);
-	$contactEmail = validate($_POST['contactEmail']);
+		$contactName = validate($_POST['contactName']);
+		$contactSurname = validate($_POST['contactSurname']);
+		$contactEmail = validate($_POST['contactEmail']);
 
 	
 
 
-	$user_data = 'contactName='. $contactName. '&contactSurname='. $contactSurname;
+		$user_data = 'contactName='. $contactName. '&contactSurname='. $contactSurname. '&contactEmail='.$contactEmail;
 
 
 	
